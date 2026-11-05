@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Privacy Policy | TORN Bank Management</title>
+<style>
+:root{color-scheme:dark;--bg:#111827;--panel:#1b2433;--text:#f3f4f6;--muted:#c2cad6;--line:#374151;--red:#dc2626}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Arial,Helvetica,sans-serif}
+header{padding:24px 20px;border-bottom:1px solid var(--line)}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.brand{font-size:19px;font-weight:700}.brand span{color:#f87171}
+main{padding:42px 0 70px}
+h1{font-size:clamp(2rem,5vw,2.7rem);line-height:1.2;margin:0 0 12px}
+h2{font-size:1.35rem;margin:34px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+p,li{color:#e5e7eb}a{color:#fca5a5}a:hover{color:#fecaca}
+.muted,.date,small{color:var(--muted)}
+.date{margin:0 0 28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin:24px 0}
+nav a{display:inline-block;margin:8px 12px 8px 0;padding:12px 18px;background:var(--red);border-radius:8px;color:white;text-decoration:none;font-weight:700}
+nav a:hover{background:#b91c1c;color:white}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.92rem}
+.placeholder{background:#3b321d;border:1px solid #79622a;padding:2px 6px;border-radius:5px;color:#fde68a}
+code{background:#263244;padding:2px 5px;border-radius:4px}
+ul{padding-left:24px}
+</style>
+</head>
+<body>
+<header><div class="wrap brand">TORN <span>Bank Management</span> <small>(TBM)</small></div></header>
+<main class="wrap">
+<h1>Privacy Policy</h1>
+<p class="date">Effective date: 5 November 2026 · Last updated: 5 November 2026</p>
+<div class="card"><strong>Data controller</strong><br>
+Controller / operator: Kevin Bleck<br>
+Discord name: Zerlox · Discord User ID: <code>247106624458719232</code><br>
+Postal address: Neue Gasse 4, 91126 Schwabach, Germany<br>
+Contact email: <a href="mailto:xzerloxyt@gmail.com">xzerloxyt@gmail.com</a></div>
+<h2>1. Who is responsible?</h2>
+<p>The controller responsible for processing personal data through TBM is Kevin Bleck, at the postal address and contact details stated above. This policy describes processing visible in the supplied bot source code. The operator must also verify and disclose any additional processing by the actual hosting provider, backup systems, server logs, monitoring tools and other infrastructure before publication.</p>
+<h2>2. Data processed</h2>
+<ul>
+<li><strong>Discord identifiers and server data:</strong> Discord user IDs, server (guild) IDs and names, channel and role identifiers, and configuration information needed to operate the bot.</li>
+<li><strong>TORN account data:</strong> TORN player ID and player name, account-link status, API-key verification timestamp and an encrypted copy of the API key.</li>
+<li><strong>Virtual banking records:</strong> recorded balance, lifetime interest credited, interest-credit timestamps, transaction/request type, amount, status, timestamps, related TORN identifiers, staff/customer Discord identifiers, and notes or details associated with requests.</li>
+<li><strong>Support and diagnostic data:</strong> support form content, ticket messages, user and server identifiers, channel identifiers, reported issue location, expected result, error categories and diagnostic details. If a support message contains attachments, the bot forwards the attachment URLs to the central support channel.</li>
+</ul>
+<h2>3. Purposes and operation</h2>
+<p>Data is processed to link and verify accounts, operate virtual bank records and requests, calculate and record virtual interest, administer server-specific roles and channels, provide support, diagnose errors, prevent misuse and maintain the service.</p>
+<p>The bot sends API requests to the official TORN API. It uses the supplied API key to verify the player's profile and, in relevant banking workflows, retrieve money information. The API key is therefore transmitted to TORN for those requests. It is not intentionally included in support reports.</p>
+<h2>4. Support reports and disclosures within Discord</h2>
+<p>When a user submits a support report or writes in a TBM support ticket, the bot forwards the report or message to a central TBM support channel on Discord. The forwarded information can include the message text, Discord user ID, server name and ID, channel information, issue location and, where supplied, expected result and attachment URLs. Automated diagnostic/error reports may also be sent to the central support channel and, in some cases, a local error channel on the server where the issue occurred.</p>
+<p>Do not submit API keys, passwords or other secrets in support messages. Support information is visible to authorized members who can access the relevant support channels.</p>
+<h2>5. Storage and security</h2>
+<p>The supplied source code stores application records in an SQLite database. TORN API keys are encrypted in the database using Fernet. The encryption key is supplied separately through the operator's server environment configuration. The security of the data therefore also depends on access controls, hosting security, backups and protection of that environment variable.</p>
+<p>No online system can be guaranteed completely secure. The operator should restrict access to the database, encryption key, backups, bot hosting account and support channels.</p>
+<h2>6. Retention and unlinking</h2>
+<p><strong>TORN API key:</strong> When a user unlinks their TORN account, the stored API key is deleted immediately as part of the unlinking process.</p>
+<p><strong>Bank balance and interest records:</strong> Records of a virtual bank balance and accrued interest are retained for as long as a balance or an outstanding claim remains. Once neither exists and the records are no longer otherwise required, they are deleted or anonymized, subject to applicable legal obligations.</p>
+<p><strong>Transaction records:</strong> Completed transaction records are retained for three months after completion. If a statutory retention obligation or another legally valid requirement applies, the relevant records are retained for the legally required period instead.</p>
+<p><strong>Other account data:</strong> Account data that is no longer required for the operation of TBM, security, support or another legitimate purpose is deleted or anonymized, unless a legal obligation requires further retention.</p>
+<p>Unlinking removes the Discord-to-TORN account association and the stored API key. It does not automatically remove bank balance, interest or transaction records that are still subject to the retention rules above. Users may submit a separate privacy request using the contact details in this policy.</p>
+<h2>7. Recipients and third-party services</h2>
+<ul>
+<li><strong>Discord:</strong> provides the platform on which commands, server roles, channels and support messages operate.</li>
+<li><strong>TORN:</strong> receives API requests, including the API key, to provide the requested profile and money information.</li>
+<li><strong>Central TBM support personnel:</strong> can access information forwarded to the central support channels.</li>
+<li><strong>Hosting and infrastructure providers:</strong> may process data as part of hosting the bot, database, backups and logs. The operator must identify the actual provider(s), their locations and any applicable data-processing arrangements before publication.</li>
+</ul>
+<h2>8. Legal basis and data protection rights</h2>
+<p>The operator must determine and document the applicable legal basis for each processing purpose under the laws that apply, including the GDPR where applicable. Depending on the circumstances, this may involve performance of a service arrangement, legitimate interests, consent or compliance with legal obligations. Do not rely on this generic description as a substitute for the operator's actual legal assessment.</p>
+<p>Where the GDPR applies, users may have rights to request access, rectification, erasure, restriction of processing, data portability, or to object to certain processing. Where processing is based on consent, consent may be withdrawn. Users may also lodge a complaint with a competent data protection supervisory authority.</p>
+<p>To exercise a right or ask a privacy question, contact <a href="mailto:xzerloxyt@gmail.com">xzerloxyt@gmail.com</a>. You may also contact the operator through the Discord account <strong>Zerlox</strong> (User ID <code>247106624458719232</code>), provided direct messages are enabled.</p>
+<h2>9. International transfers</h2>
+<p>Discord, TORN and the operator's hosting or infrastructure providers may process data in countries outside the user's country. The operator must verify the actual locations and applicable transfer safeguards for the services used and update this section accordingly.</p>
+<h2>10. Children's privacy</h2>
+<p>TBM is not specifically designed for children. Users must meet the age requirements and comply with the terms of Discord and TORN.</p>
+<h2>11. Accuracy of service and infrastructure information</h2>
+<p>This policy must be checked against the live deployment before publication. In particular, the operator must identify the actual hosting and backup providers, confirm their processing locations and applicable safeguards, document the legal basis for each processing purpose, and ensure that the stated retention periods are implemented in practice. If the live bot behaves differently from the supplied source code, this policy must be updated to match the live service.</p>
+<h2>12. Changes to this policy</h2>
+<p>This policy may be updated to reflect changes to the bot, its infrastructure or applicable legal requirements. The latest version will be published at this address with a revised effective date.</p>
+<h2>13. Contact</h2>
+<p>Privacy contact: Kevin Bleck, Neue Gasse 4, 91126 Schwabach, Germany, email: <a href="mailto:xzerloxyt@gmail.com">xzerloxyt@gmail.com</a>.</p>
+</main>
+<footer><div class="wrap">TORN Bank Management (TBM) · Independent community application ·
+<a href="index.html">Home</a> · <a href="impressum.html">Impressum</a> · <a href="terms-of-service.html">Terms</a> · <a href="privacy-policy.html">Privacy</a></div></footer>
+</body></html>
