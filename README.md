@@ -1,4 +1,3 @@
-
 # TORN Bank Management (TBM)
 
 Welcome to the official TORN Bank Management Discord Bot website.
