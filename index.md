@@ -1,7 +1,3 @@
----
-layout: default
-title: TORN Bank Management
----
 
 # TORN Bank Management (TBM)
 
