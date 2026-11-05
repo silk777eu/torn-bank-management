@@ -1,0 +1,15 @@
+Upload these files to the ROOT of:
+https://github.com/silk777eu/torn-bank-management
+
+- index.html (new file)
+- terms-of-service.md (replace the existing file)
+- privacy-policy.md (replace the existing file)
+
+Do NOT upload the old .html legal page drafts from the previous package. The Markdown files are processed by GitHub Pages into:
+https://silk777eu.github.io/torn-bank-management/terms-of-service.html
+https://silk777eu.github.io/torn-bank-management/privacy-policy.html
+
+IMPORTANT BEFORE PUBLICATION:
+Replace every [FULL LEGAL NAME / BUSINESS NAME], [FULL POSTAL ADDRESS], and [CONTACT EMAIL ADDRESS] placeholder.
+The privacy policy also needs the actual hosting provider/location and a real retention schedule.
+These drafts reflect the supplied source code, but do not verify production hosting, backups, access controls, or actual operational practices.
