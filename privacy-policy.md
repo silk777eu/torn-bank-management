@@ -1,157 +1,82 @@
-# Privacy Policy – TORN Bank Management (TBM)
+---
+layout: default
+title: Privacy Policy
+---
 
-**Effective Date:** November 5, 2026
+# Privacy Policy
 
-## 1. Introduction
+Effective date: 5 November 2026 · Last updated: 5 November 2026
 
-This Privacy Policy explains how TORN Bank Management (TBM), a Discord application, collects, processes, stores, and protects information when users interact with the bot.
+Controller details must be completed before publication.
 
-By using TBM, you acknowledge the data practices described in this policy.
+Controller / operator: [FULL LEGAL NAME / BUSINESS NAME]
 
-## 2. Information We Collect
+Postal address: [FULL POSTAL ADDRESS]
 
-To operate the application, TBM may collect and process the following information:
+Contact email: [CONTACT EMAIL ADDRESS]
 
-### Discord Information
-- Discord User ID.
-- Discord Server (Guild) ID and server name.
-- Discord role and configuration information required for bot functionality.
-- Information submitted through Discord commands, forms, and support tickets.
+## 1. Who is responsible?
 
-### TORN Account Information
-- TORN Player ID.
-- TORN Player Name.
-- TORN API key, stored in encrypted form.
-- API key verification timestamp.
-- TORN account balance maintained by the banking system.
+The controller responsible for processing personal data through TBM is the operator identified above. Complete these details before making this policy available to users. This policy describes processing visible in the supplied bot source code; hosting, backups, server logs and other infrastructure may involve additional processing that must be added by the operator.
 
-### Banking Information
-- Virtual account balances.
-- Interest earned and interest calculation timestamps.
-- Deposit, withdrawal, and loan request information.
-- Transaction amounts, types, statuses, timestamps, and related notes.
-- Relevant staff and administrator activity records.
+## 2. Data processed
 
-### Support and Technical Information
-- Support requests and descriptions of reported issues.
-- Discord user and server information associated with support reports.
-- Technical error information required to diagnose and resolve problems.
+- Discord identifiers and server data: Discord user IDs, server (guild) IDs and names, channel and role identifiers, and configuration information needed to operate the bot.
 
-## 3. How We Use Information
+- TORN account data: TORN player ID and player name, account-link status, API-key verification timestamp and an encrypted copy of the API key.
 
-The collected information is used exclusively for operating and maintaining TBM, including:
+- Virtual banking records: recorded balance, lifetime interest credited, interest-credit timestamps, transaction/request type, amount, status, timestamps, related TORN identifiers, staff/customer Discord identifiers, and notes or details associated with requests.
 
-- Verifying TORN account ownership.
-- Linking Discord accounts to TORN accounts.
-- Retrieving TORN player identity and cash balance information.
-- Operating virtual banking accounts.
-- Managing deposits, withdrawals, and loan requests.
-- Calculating and recording virtual interest.
-- Managing server-specific roles and permissions.
-- Providing customer support and investigating technical issues.
-- Preventing abuse, fraud, and unauthorized access.
-- Maintaining the security and reliability of the application.
+- Support and diagnostic data: support form content, ticket messages, user and server identifiers, channel identifiers, reported issue location, expected result, error categories and diagnostic details. If a support message contains attachments, the bot forwards the attachment URLs to the central support channel.
 
-## 4. TORN API Keys and Security
+## 3. Purposes and operation
 
-Users provide a TORN API key through the bot's private account-linking interface.
+Data is processed to link and verify accounts, operate virtual bank records and requests, calculate and record virtual interest, administer server-specific roles and channels, provide support, diagnose errors, prevent misuse and maintain the service.
+The bot sends API requests to the official TORN API. It uses the supplied API key to verify the player's profile and, in relevant banking workflows, retrieve money information. The API key is therefore transmitted to TORN for those requests. It is not intentionally included in support reports.
 
-API keys are:
-- Stored in the bot's database in encrypted form using Fernet encryption.
-- Used to verify TORN account identity and retrieve the information required by the application.
-- Transmitted to the official TORN API when the application requests authorized account information.
-- Not intentionally disclosed to other users or forwarded to the central support team.
+## 4. Support reports and disclosures within Discord
 
-A Full Access API key is not required. Users should select the minimum permissions necessary for the features they wish to use.
+When a user submits a support report or writes in a TBM support ticket, the bot forwards the report or message to a central TBM support channel on Discord. The forwarded information can include the message text, Discord user ID, server name and ID, channel information, issue location and, where supplied, expected result and attachment URLs. Automated diagnostic/error reports may also be sent to the central support channel and, in some cases, a local error channel on the server where the issue occurred.
+Do not submit API keys, passwords or other secrets in support messages. Support information is visible to authorized members who can access the relevant support channels.
 
-Users can unlink their account using `/unlink_account`. This removes the stored API key and account association. Other banking records may remain in the database.
+## 5. Storage and security
 
-## 5. Data Storage and Retention
+The supplied source code stores application records in an SQLite database. TORN API keys are encrypted in the database using Fernet. The encryption key is supplied separately through the operator's server environment configuration. The security of the data therefore also depends on access controls, hosting security, backups and protection of that environment variable.
+No online system can be guaranteed completely secure. The operator should restrict access to the database, encryption key, backups, bot hosting account and support channels.
 
-Information is stored in the application's database for as long as necessary to provide the banking and support services.
+## 6. Retention and unlinking
 
-When a user unlinks their TORN account:
-- The stored API key is deleted.
-- The Discord-to-TORN account association is removed.
-- Existing banking balances and transaction records are not automatically deleted.
+The source code does not define a fixed deletion or retention schedule for banking, transaction, support or diagnostic records. The operator must establish and publish an appropriate retention period and delete or anonymize records when they are no longer needed, unless retention is required for a legitimate purpose or by law.
+Using /unlink_account removes the Discord-to-TORN link and clears the stored encrypted API key and its verification timestamp. It does not delete the TORN account record, virtual bank balance, lifetime interest information or existing transaction records. A separate privacy request may be made using the contact details above; deletion may be subject to applicable legal requirements and the need to preserve relevant transaction records.
 
-Certain records may be retained for operational, security, auditing, and banking record-keeping purposes.
+## 7. Recipients and third-party services
 
-The exact retention period depends on operational requirements and applicable legal obligations.
+- Discord: provides the platform on which commands, server roles, channels and support messages operate.
 
-## 6. Support Requests
+- TORN: receives API requests, including the API key, to provide the requested profile and money information.
 
-When users submit a support report through `/supporttbm`, the information may be forwarded to the central TBM Support server.
+- Central TBM support personnel: can access information forwarded to the central support channels.
 
-A support report may contain:
-- Discord username and user ID.
-- Discord server name and server ID.
-- The location of the reported issue.
-- The description of the problem.
-- Additional information provided by the user.
+- Hosting and infrastructure providers: may process data as part of hosting the bot, database, backups and logs. The operator must identify the actual provider(s), their locations and any applicable data-processing arrangements before publication.
 
-Support reports are used to investigate problems and provide assistance.
+## 8. Legal basis and data protection rights
 
-Users should never include passwords, TORN API keys, or other sensitive authentication credentials in support reports.
+The operator must determine and document the applicable legal basis for each processing purpose under the laws that apply, including the GDPR where applicable. Depending on the circumstances, this may involve performance of a service arrangement, legitimate interests, consent or compliance with legal obligations. Do not rely on this generic description as a substitute for the operator's actual legal assessment.
+Where the GDPR applies, users may have rights to request access, rectification, erasure, restriction of processing, data portability, or to object to certain processing. Where processing is based on consent, consent may be withdrawn. Users may also lodge a complaint with a competent data protection supervisory authority.
+To exercise a right or ask a privacy question, contact: [CONTACT EMAIL ADDRESS].
 
-## 7. Data Sharing and Third-Party Services
+## 9. International transfers
 
-TBM relies on external services to operate:
+Discord, TORN and the operator's hosting or infrastructure providers may process data in countries outside the user's country. The operator must verify the actual locations and applicable transfer safeguards for the services used and update this section accordingly.
 
-**Discord:** Used for account interactions, commands, server management, and support functionality.
+## 10. Children's privacy
 
-**TORN:** Used to verify TORN accounts and retrieve authorized player information through the official TORN API.
+TBM is not specifically designed for children. Users must meet the age requirements and comply with the terms of Discord and TORN.
 
-Information may be transmitted to these services when necessary to provide the requested functionality.
+## 11. Changes to this policy
 
-TORN API keys are not intentionally shared with other users or the central support team.
-
-TBM does not sell users' personal information.
-
-## 8. Data Security
-
-Reasonable technical and organizational measures are used to protect stored information against unauthorized access, disclosure, alteration, or destruction.
-
-These measures include:
-- Fernet encryption for stored TORN API keys.
-- Restricted access to banking and administrative functions.
-- Discord permission controls for server-specific operations.
-- Database access controls and application security measures.
-
-However, no online service or storage system can guarantee absolute security.
-
-## 9. User Rights and Data Requests
-
-Depending on applicable data protection laws, users may have the right to:
-
-- Request access to their personal information.
-- Request correction of inaccurate information.
-- Request deletion of personal information where applicable.
-- Object to or request restriction of certain processing activities.
-- Withdraw consent where processing is based on consent.
-
-To make a privacy-related request, contact the TBM application operator through the official support channel using `/supporttbm`.
-
-Unlinking an account through `/unlink_account` removes the stored API key and account association but does not automatically erase all historical banking records.
-
-## 10. Children's Privacy
-
-TBM is not specifically designed for children. Users must comply with the applicable age requirements and terms of service of Discord and TORN.
-
-## 11. Changes to This Privacy Policy
-
-This Privacy Policy may be updated from time to time to reflect changes in the application, its features, or applicable legal requirements.
-
-The latest version will always be published in the official TBM GitHub repository.
+This policy may be updated to reflect changes to the bot, its infrastructure or applicable legal requirements. The latest version will be published at this address with a revised effective date.
 
 ## 12. Contact
 
-For privacy-related questions, data requests, or concerns about the handling of information, please contact the TBM application operator through the official support channel.
-
-**Application:** TORN Bank Management (TBM)  
-**Platform:** Discord  
-**Effective Date:** November 5, 2026
-
----
-
-By using TORN Bank Management, you acknowledge that you have read this Privacy Policy.
+Privacy contact: [FULL LEGAL NAME / BUSINESS NAME], [POSTAL ADDRESS], [CONTACT EMAIL ADDRESS].
